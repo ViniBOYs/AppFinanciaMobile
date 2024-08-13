@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
+
+import 'components/StartApp_AnimatedBnt.dart';
+
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
@@ -11,9 +14,22 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  late RiveAnimationController _bntAnimationController; //Variavel para estado da Animação RIVE
+
+  @override
+  void initState() { // Seta os Parametros para a função da animação RIVE
+    _bntAnimationController = OneShotAnimation(
+      "active", 
+      autoplay: false //autoplay: false -> Previne que a animação não comece sozinha no inicio do app/tela
+      );              
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
+      // Background
       body: Stack(
         children: [
           Positioned( // Imagem fixa no fundo da animação
@@ -28,10 +44,57 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               child: SizedBox(),
             ),
           ),
-          // Area do Titulo
-          // SafeArea(child: )
+
+          // Area do Titulo / Subtitulo
+          SafeArea(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 32, vertical: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Spacer(),
+                  // Titulo / Subtitulo
+                  SizedBox( 
+                    width: 260,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Bla bla Bla bla Blaa",
+                          style: TextStyle(
+                            fontSize: 50,
+                            fontFamily: "Poppins",
+                            height: 1, // Distância Vertical entre as letras
+                          ),
+                        ),
+                        SizedBox(height: 16), //Subtitulo
+                        Text("Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l "),
+                      ],
+                    ),
+                  ),
+
+                  Spacer(), // Espaço Vazio no centro da tela
+
+                  // Botão Animado -> Componente
+                  StartApp_AnimatedBnt(
+                    bntAnimationController: _bntAnimationController,
+                    press: () {
+                      _bntAnimationController.isActive = true;
+                    },
+                  ),
+
+                  //Texto Abaixo do botão
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 24),
+                    child: Text("Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l "),
+                  )
+                ],
+              ),
+            )
+          )
         ],
       ),
     );
   }
 }
+
+
