@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rive/rive.dart';
 
 
+import '../aplication/aplication_screen.dart';
 import 'components/StartApp_AnimatedBnt.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -37,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             bottom: 200,
             left: 100,
             child: Image.asset("assets/Backgrounds/Spline.png")),
-          RiveAnimation.asset("assets/RiveAssets/shapes.riv"), // Diretório da Animação do Fundo
+          RiveAnimation.asset("assets/RiveAssets/onboard_animationv2.riv"), // Diretório da Animação do Fundo
           Positioned.fill(
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 20, sigmaY: 10), // Potencia do blur no Eixo X e Y
@@ -79,6 +80,29 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     bntAnimationController: _bntAnimationController,
                     press: () {
                       _bntAnimationController.isActive = true;
+                      showGeneralDialog(
+                        context: context, 
+                        pageBuilder: (context, _, __) => Center(
+                          child: Container(
+                            height: 620,
+                            margin: EdgeInsets.symmetric(horizontal: 16),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.all(Radius.circular(40)),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center, 
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                ElevatedButton(onPressed: (){Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => const AplicationPage()),
+                                );}, child: Text("OI"))
+                              ],
+                            ),
+                          ),
+                        )
+                      );
                     },
                   ),
 

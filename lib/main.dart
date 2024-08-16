@@ -5,6 +5,13 @@ void main() {
   runApp(const MyApp());
 }
 
+// green
+// * Lightgreen
+// ? Blue
+// ! Red
+// Todo Orange
+ 
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,8 +23,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFFEEF1F8), //Background Geral (Aplica na tela onbonding_screen.dart)
-        primarySwatch: Colors.blue,
-        fontFamily: "Intel",
+        primarySwatch: Colors.blue, 
+        fontFamily: "Intel",  
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.white,
