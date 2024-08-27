@@ -29,9 +29,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Stack(
 
       // Background
-      body: Stack(
         children: [
           Positioned( // Imagem fixa no fundo da animação
             width: MediaQuery.of(context).size.width * 1.7,

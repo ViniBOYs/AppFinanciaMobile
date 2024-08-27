@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -7,34 +9,53 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children: [
-          Container(width: 200, height: 200, color: Colors.amber,
-          child: Text("TelaHome"),)
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [         
+          Container(
+            height: 380, 
+            decoration: const BoxDecoration(
+              color: primaryColor,
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(70),
+                bottomRight: Radius.circular(70)               
+              ) 
+            ),
+          ),
+          Container(
+            width: 350,
+            height: 200, 
+            decoration: BoxDecoration(
+              color: backgroundColorLight,
+              borderRadius: BorderRadius.all(Radius.circular(20)), 
+            ),
+          ),
+          SizedBox(height: 20,),
+          Container(
+            width: 350,
+            height: 200, 
+            decoration: BoxDecoration(
+              color: backgroundColorLight,
+              borderRadius: BorderRadius.all(Radius.circular(20)), 
+            ),
+          ),
         ],
       ),
     );
   }
 }
 
-// @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       title: 'App Financias',
-//       debugShowCheckedModeBanner: true,
-//       theme: ThemeData(
-//         scaffoldBackgroundColor: Color(0xFFEEF1F8), //Background Geral (Aplica na tela onbonding_screen.dart)
-//         primarySwatch: Colors.blue, 
-//         fontFamily: "Intel",  
-//         inputDecorationTheme: InputDecorationTheme(
-//           filled: true,
-//           fillColor: Colors.white,
-//           errorStyle: TextStyle(height: 0),
-//           border: defaultInputBorder,
-//           enabledBorder: defaultInputBorder,
-//           focusedBorder: defaultInputBorder,
-//           errorBorder: defaultInputBorder,
-//         ),
-//       ),
-//       home: const OnboardingScreen(),
+
+
+
+
+// ListView(
+//       children: [
+//         Container(height: 500, color: Colors.white),
+//         Container(height: 200, color: Colors.amber,),
+//         Container(height: 200, color: const Color.fromARGB(255, 208, 174, 71),),
+//         Container(height: 200, color: Colors.amber,),
+//         Container(height: 200, color: const Color.fromARGB(255, 208, 174, 71),),
+//         Container(height: 200, color: Colors.amber,),
+//         Container(height: 200, color: const Color.fromARGB(255, 208, 174, 71),),
+//       ],
 //     );
-//   }

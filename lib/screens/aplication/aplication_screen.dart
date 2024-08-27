@@ -12,6 +12,9 @@ class _AplicationPageState extends State<AplicationPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromARGB(255, 44, 61, 99)
+      ),
       home: HomeScreen(),
     );
   }
