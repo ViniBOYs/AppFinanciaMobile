@@ -33,7 +33,7 @@ class StartApp_AnimatedBnt extends StatelessWidget {
               children: [
                 Icon(Icons.double_arrow_rounded),
                 Text(
-                  "Start The APP",
+                  "Entrar no app",
                   style: TextStyle(fontWeight: FontWeight.w700),
                 ),
               ],

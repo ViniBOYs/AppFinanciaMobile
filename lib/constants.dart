@@ -7,5 +7,3 @@ const Color shadowColorLight = Color(0xFF4A5367);
 const Color shadowColorDark = Colors.black;
 const Color secondaryColor = Color.fromRGBO(242, 13, 100, 1);
 const Color primaryColor = Color.fromRGBO(169,4,241, 1);
-
-

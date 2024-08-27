@@ -60,7 +60,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: Column(
                       children: [
                         Text(
-                          "Bla bla Bla bla Blaa",
+                          "Safe Finances",
                           style: TextStyle(
                             fontSize: 50,
                             fontFamily: "Poppins",
@@ -68,7 +68,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                         ),
                         SizedBox(height: 16), //Subtitulo
-                        Text("Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l "),
+                        Text("Uma plataforma de gestão e Aprendizado"),
                       ],
                     ),
                   ),
@@ -80,6 +80,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     bntAnimationController: _bntAnimationController,
                     press: () {
                       _bntAnimationController.isActive = true;
+
                       showGeneralDialog(
                         context: context, 
                         pageBuilder: (context, _, __) => Center(
@@ -109,7 +110,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   //Texto Abaixo do botão
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 24),
-                    child: Text("Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l Faz o l "),
+                    child: Text("Uma jornada de aprendizado..."),
                   )
                 ],
               ),

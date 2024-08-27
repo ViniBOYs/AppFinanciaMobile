@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:rive_animation/screens/home/Home_screen.dart';
 
-class AplicationPage extends StatefulWidget {
-  const AplicationPage({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
-  @override
-  State<AplicationPage> createState() => _AplicationPageState();
-}
-
-class _AplicationPageState extends State<AplicationPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(width: 200, height: 200, color: Colors.amber,
+          child: Text("TelaHome"),)
+        ],
+      ),
     );
   }
 }
-
 
 // @override
 //   Widget build(BuildContext context) {
