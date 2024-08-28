@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
-import 'components/ObjFavList.dart';
+import '../home/components/ObjFavList.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class DebtsListScreen extends StatelessWidget {
+  const DebtsListScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: 300, 
                   decoration: const BoxDecoration(
-                    color: primaryColor,
+                    color: secondaryColor,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(50),
                       bottomRight: Radius.circular(50)               
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                         child: Image.asset("assets/img/Porco.png",width: 200,height: 200,)),
                       Positioned( // ? Saldo 
                         bottom:100,
-                        child: Text("Saldo", 
+                        child: Text("Faz o L", 
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w100,

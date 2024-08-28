@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFFEEF1F8), //Background Geral (Aplica na tela onbonding_screen.dart)
         primarySwatch: Colors.blue, 
-        fontFamily: "Intel",  
+        fontFamily: "Intel",
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: Colors.white,

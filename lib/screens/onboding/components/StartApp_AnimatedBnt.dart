@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:rive_animation/screens/onboding/onboding_screen.dart';
 import 'package:rive/rive.dart';
 
 class StartApp_AnimatedBnt extends StatelessWidget {
