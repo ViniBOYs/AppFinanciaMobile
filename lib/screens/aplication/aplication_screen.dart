@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rive_animation/constants.dart';
 import 'package:rive_animation/screens/home/Home_screen.dart';
 
 class AplicationPage extends StatefulWidget {
@@ -13,7 +14,14 @@ class _AplicationPageState extends State<AplicationPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 44, 61, 99)
+        scaffoldBackgroundColor: backgroundApp,
+        primarySwatch: Colors.blue, 
+        fontFamily: "Intel",  
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          errorStyle: TextStyle(height: 0),
+        ),
       ),
       home: HomeScreen(),
     );
