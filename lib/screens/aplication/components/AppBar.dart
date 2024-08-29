@@ -25,8 +25,11 @@ class _AppBarComponentState extends State<AppBarComponent> {
           bottom: 25,
           child: Container(
             width: (MediaQuery.of(context).size.width/1.1),
-            height: 70, decoration: 
-              BoxDecoration(borderRadius: BorderRadius.circular(20),), // ? Backgound do Appbar
+            height: 70, 
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              // color: Color.fromRGBO(255, 255, 255, 0.3)
+            ), // ? Backgound do Appbar
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -43,8 +46,7 @@ class _AppBarComponentState extends State<AppBarComponent> {
                                 flex: 1,
                                 child: GestureDetector(
                                   onTap: () {                                    
-                                    SwitchScreen(0);
-                                    // print("Home-Buttom");
+                                    print("Home-Buttom");
                                   },
                                   child: Container(
                                     child: Icon(LucideIcons.house,color: primaryColor,size: 25,),
@@ -55,8 +57,7 @@ class _AppBarComponentState extends State<AppBarComponent> {
                                 flex: 1,
                                 child: GestureDetector(
                                   onTap: () {
-                                      SwitchScreen(1);
-                                    // print("List-Buttom");
+                                    print("List-Buttom");
                                   },
                                   child: Container(
                                     child: Icon(LucideIcons.clipboard_list,color: primaryColor,size: 25,),
