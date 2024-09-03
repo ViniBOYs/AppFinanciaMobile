@@ -34,8 +34,7 @@ class DebtsListScreen extends StatelessWidget {
     //     )
     //   ],
     // );
-  
-  
+    
     // return Column(
     //   children: [
     //     Container(
@@ -154,7 +153,8 @@ class DebtsListScreen extends StatelessWidget {
                                         color: backgroundApp,
                                         borderRadius: BorderRadius.all(Radius.circular(20))
                                       ),
-                                    )
+                                    ),
+                                    Text("teste"),
                                   ],
                                 ),
                               ),
