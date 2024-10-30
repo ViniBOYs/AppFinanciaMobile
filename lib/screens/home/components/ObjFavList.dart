@@ -72,7 +72,7 @@ class ObjFavList extends StatelessWidget {
                 ranges: [
                   LinearGaugeRange(
                     edgeStyle: LinearEdgeStyle.bothCurve,  
-                    endValue: 60, // ! Valor do Percentual da barra                 
+                    endValue: 60, // ! Valor do Percentual da barra    
                     startWidth: 25, 
                     endWidth: 25,
                     shaderCallback: (bounds) => RadialGradient(

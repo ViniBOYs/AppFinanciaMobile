@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rive_animation/constants.dart';
 import 'package:rive_animation/screens/aplication/components/AppBar.dart';
+import 'package:rive_animation/screens/community/Community_screen.dart';
 import 'package:rive_animation/screens/debtsList/debtsList_screen.dart';
 import 'package:rive_animation/screens/home/Home_screen.dart';
 
@@ -33,7 +34,8 @@ class _AplicationPageState extends State<AplicationPage> {
         alignment: Alignment.center,
         children: [
           // HomeScreen(),
-          DebtsListScreen(),
+          // DebtsListScreen(),
+          CommunityScreen(),
           AppBarComponent(),
         ],
       ),
