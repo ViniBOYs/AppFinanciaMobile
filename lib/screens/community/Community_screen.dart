@@ -33,20 +33,20 @@ class CommunityScreen extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     children: [
                       
-                      Positioned( // ? Circle
+                      Positioned( // ? Speech Ico
                         left: 150,
                         top: 45,
                         child: Icon(LucideIcons.speech,color: primaryColor,size: 105,)),
-                      Positioned( // ? Circle
+                      Positioned( // ? Spline Ico
                       left: 45,
                       top: 85,
                       child: Icon(LucideIcons.spline,color: primaryColorHighlight, size: 100,)),
-                      Positioned( // ? Circle
+                      Positioned( // ? Users Ico
                       left: 5,
                       bottom: 50,
                       child: Icon(LucideIcons.users,color: primaryColor, size: 120,)),
                       
-                      Positioned( // ? Saldo 
+                      Positioned( // ? Comuni 
                         left: 100,
                         bottom:150,
                         child: Text("Comuni", 
@@ -59,7 +59,7 @@ class CommunityScreen extends StatelessWidget {
                           )
                         )
                       ),
-                      Positioned( // ? Saldo 
+                      Positioned( // ? Dade 
                         left: 184,
                         bottom:90,
                         child: Text("dade", 
@@ -142,6 +142,7 @@ class CommunityScreen extends StatelessWidget {
                 
                 GestureDetector(
                   onTap: () => {
+                    // Função para direcionar para o Youtube
                     print("Clicked")
                   },
                   child: Column(
@@ -171,13 +172,36 @@ class CommunityScreen extends StatelessWidget {
                                 color: backgroundApp,
                                 borderRadius: BorderRadius.circular(20)
                               ),
+                              child: Icon(LucideIcons.youtube,color: secondaryColor, size: 50,),
                             ),
                             SizedBox(width: 15),
                             Container(
                               width: 185,
                               height: 150,
-                              color: Colors.amber,
-                              child: Text("Faz O L"),
+                              // color: Colors.amber,
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  Text("Titulo da paradinha", 
+                                    style: TextStyle(
+                                      color: backgroundColor2,
+                                      fontWeight: FontWeight.w100,
+                                      fontSize: 18,
+                                      fontFamily: "Poppins",
+                                      decoration: TextDecoration.none
+                                    )
+                                  ),
+                                  Text("Subtitulo da paradinha", 
+                                    style: TextStyle(
+                                      color: shadowColorLight,
+                                      fontWeight: FontWeight.w100,
+                                      fontSize: 18,
+                                      fontFamily: "Poppins",
+                                      decoration: TextDecoration.none
+                                    )
+                                  ),
+                                ],
+                              ),
                             ),
                           ],
                         )
